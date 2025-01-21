@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susmitha's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #f39c12;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            color: black;
+        }
+
+        /* Home Section */
+        #home {
+            height: 250px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20pxa;
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+        }
+
+        #home h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        #home img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #f39c12;
+           
+        }
+
+        .typing {
+            color: black;
+            font-size: 28px;
+        }
+
+        /* About Section */
+        #about {
+            padding: 50px 20px;
+            text-align: center;
+            background: #333;
+        }
+
+        #about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Skills Section */
+        #skills {
+            padding: 50px 20px;
+            background: #0a0a0a;
+        }
+
+        .skills-list {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .skill-rectangle {
+            background:  #f39c12;
+            color: #fff;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-rectangle:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            background-color: #e67e22;
+        }
+        
+
+        /* Projects Section */
+        #projects {
+            padding: 50px 20px;
+            background-color: #0a0a0a;
+            color: white;
+        }
+
+        .projects-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #f39c12;
+        }
+
+        .project-info p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            text-decoration: none;
+            background-color: #f39c12;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            display: block;
+        }
+
+        .project-link:hover {
+            background-color: #e67e22;
+        }
+
+        /* Education Section */
+        #education {
+            padding: 50px 20px;
+            background: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        .education-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .education-card {
+            background: #444;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        .education-card h3 {
+            margin-bottom: 10px;
+            color: #f39c12;
+        }
+
+        /* Resume Section */
+        #resume {
+            padding: 50px 20px;
+            background: #0a0a0a;
+            color: #fff;
+            text-align: center;
+        }
+
+        .resume-button {
+            background: #f39c12;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+
+        .resume-button:hover {
+            background: #e67e22;
+        }
+        /* Contact Section */
+        #contact {
+            padding: 50px 20px;
+            text-align: center;
+            background: #333;
+        }
+        .social-links {
+                margin: 20px 0;
+         }
+
+        .social-links a {
+         color: #fff;
+           margin: 0 10px;
+          font-size: 24px;
+         text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #f39c12;
+}
+
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #0a0a0a;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div><a href="#home">🆂🆄🆂🅼🅸🆃🅷🅰🖤</a></div>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>𝓗𝓮𝓵𝓵𝓸 :) I'm <span class="typing"></span></h1>
+        <img src="https://res.cloudinary.com/dam5pcbmg/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1737441303/1000151376_jayo8j.jpg" alt="My Image">
+    </section>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello!! I'm Susmitha  a passionate and dedicated learner with a strong foundation in programming and technology.I have worked on some of the projects that showcase my skills and creativity.My goal is to leverage my technical expertise and creativity to contribute to meaningful projects and make an impact in the tech world. Let's connect and explore how we can collaborate on exciting projects!  Explore my portfolio to learn more about me!</p>
+    </section>
+   <!-- Education Section -->
+   <section id="education">
+    <h2>Education</h2>
+    <div class="education-container">
+        <div class="education-card">
+            <h3>B.Tech</h3>
+            <p><strong>Institution:Sasi Institute Of Technology & Engineering</strong></p>
+            <p><strong>Specialization:CSE-DataScience</strong> </p>
+            <p><strong>Year:2022-2026</strong></p>
+        </div>
+        <div class="education-card">
+            <h3>Inter-MPC</h3>
+            <p><strong>Institution:Sri Chaitanya jnr College</strong> </p>
+            <p><strong>Year:2020-2022</strong></p>
+        </div>
+        <div class="education-card">
+            <h3>High School</h3>
+            <p><strong>Institution:Narayana Olympiad School </strong> </p>
+            <p><strong>Year:2020</strong> </p>
+        </div>
+    </div>
+</section>
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skill-rectangle">HTML</div>
+            <div class="skill-rectangle">CSS</div>
+            <div class="skill-rectangle">JavaScript</div>
+            <div class="skill-rectangle">Python</div>
+            <div class="skill-rectangle">React</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>CodeFobe Clone</h3>
+                    <p>A clone of CodeFobe with interactive features.</p>
+                    <a href="https://github.com/susmithachaganti/codefobe" target="_blank" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Quote Generator</h3>
+                    <p>A random quote generator with a user-friendly interface.</p>
+                    <a href="https://github.com/susmithachaganti/quotegenerator" target="_blank" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Portfolio</h3>
+                    <p>My Portfolio Website.</p>
+                    <a href="https://github.com/susmithachaganti/todolist" target="_blank" class="project-link">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Resume Section -->
+    <section id="resume">
+        <h2>My Resume</h2>
+        <a href="https://shorturl.at/BXqzQ" download class="resume-button">Download Resume</a>
+         <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/susmitha-chaganti-230756280/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/susmithachaganti" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/ch_susmitha_/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy;Susmitha's Portfolio</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script>
+        // Typing Effect
+        new Typed(".typing", {
+            strings: ["Susmitha","A Student", " A Developer", "A Learner"],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+
+
+</body>
+</html>
