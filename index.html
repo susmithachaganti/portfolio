@@ -14,18 +14,15 @@
             font-family: Arial, sans-serif;
             scroll-behavior: smooth;
         }
-
         body {
             background-color : #0c2d48;
             color: #fff;
             line-height: 1.6;
         }
-
         h1, h2, h3 {
             text-align: center;
             margin-bottom: 20px;
         }
-
         /* Navbar */
         .navbar {
             background:#0c2d48;
@@ -38,14 +35,12 @@
             align-items: center;
             padding: 0 20px;
         }
-
         .navbar a {
             color: #fff;
             text-decoration: none;
             margin: 0 15px;
             font-size: 18px;
         }
-
         .navbar a:hover {
             color: black;
         }
@@ -67,7 +62,6 @@
             font-size: 20px;
             cursor:pointer;
         }
-
         /* Home Section */
         #home {
             height: 250px;
@@ -78,127 +72,38 @@
             padding: 20pxa;
             background: linear-gradient(135deg, #c3e0e5, #c3e0e5);
         }
-
         #home h1 {
             font-size: 50px;
             margin-bottom: 10px;
         }
-
         #home img {
             width: 250px;
             height: 250px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #c3e0e5;
-           
+            border: 5px solid #c3e0e5; 
         }
-
         .typing {
             color: black;
             font-size: 28px;
         }
-
         /* About Section */
         #about {
             padding: 50px 20px;
             text-align: center;
             background: #0c2d48;
         }
-
         #about p {
             max-width: 800px;
             margin: 0 auto;
             font-size: 18px;
             line-height: 1.8;
         }
-
-        /* Skills Section */
-        #skills {
-            padding: 50px 20px;
-            background: #0c2d48;
-        }
-
-        .skills-list {
-            max-width: 800px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 30px;
-            text-align: center;
-        }
-
-        .skill-rectangle {
-            background:  #FFE5E5;
-            color: black;
-            padding: 20px;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .skill-rectangle:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            background-color: #FFE5E5;
-        }
-        
-
-        /* Projects Section */
-        #projects {
-            padding: 50px 20px;
-            background-color: #0c2d48;
-            color: white;
-        }
-
-        .projects-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .project-card {
-            background-color: #0c2d48;
-            border-radius: 10px;
-            overflow: hidden;
-            width: 280px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        }
-        .project-info {
-            padding: 20px;
-        }
-        .project-info h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: black;
-        }
-        .project-info p {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-        .project-link {
-            text-decoration: none;
-            background-color: #FFE5E5;
-            color: black;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
-            display: block;
-        }
-        .project-link:hover {
-            background-color: #FFE5E5;
-        }
         /* Education Section */
         #education {
             padding: 50px 20px;
             background: #0c2d48;
-            color: #fff;
+            color: white;
             text-align: center;
         }
         .education-container {
@@ -208,7 +113,7 @@
             gap: 20px;
         }
         .education-card {
-            background: #0c2d48;
+            background:  #c3e0e5;
             padding: 20px;
             border-radius: 10px;
             width: 300px;
@@ -217,13 +122,256 @@
         }
         .education-card h3 {
             margin-bottom: 10px;
-            color: #FFE5E5;
+            color: #0c090d;
         }
+ /* Skills Section */
+ .skills-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 25px; /* Increased height for better visibility */
+    background: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+    text-align: right;
+    line-height: 25px; /* Align text vertically */
+    padding-right: 10px; /* Space for text */
+    font-weight: bold;
+    color: white; /* Ensure visibility */
+}
+
+.html { width: 95%; background: #FF5733; }
+.css { width: 90%; background: #007BFF; }
+.js { width: 85%; background: #FFD700; color: black; } /* Darker text for contrast */
+.python { width: 92%; background: #4B8BBE; }
+.sql { width: 88%; background: #006699; }
+.ds { width: 80%; background: #8E44AD; }
+.ml { width: 85%; background: #2ECC71; }
+.react { width: 55%; background: #61DBFB; color: black; } /* Adjusted color for contrast */
+.certificates-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Enables scrolling if there are more certificates */
+    padding: 20px;
+    justify-content: center;
+}
+
+.certificate-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.certificate-card:hover {
+    transform: scale(1.05);
+}
+
+.certificate-info {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.certificate-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #a9d1f2 ;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.certificate-link:hover {
+    background:  #82b4e6;
+}
+  /* Internship Slide Styles */
+  .internships-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.internship-card {
+    width: 300px;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+.internship-card:hover {
+    transform: scale(1.05);
+}
+.internship-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+.internship-card:hover .internship-info {
+    transform: translateY(0);
+}
+
+.internship-buttons {
+    margin-top: 10px;
+}
+
+.internship-link {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* GitHub Repository Button */
+.github-link {
+    background: #24292e;
+    color: white;
+    border: 2px solid #24292e;
+}
+
+.github-link:hover {
+    background: white;
+    color: #24292e;
+}
+
+/* LinkedIn Post Button */
+.linkedin-link {
+    background:#24292e;
+    color: white;
+    border: 2px solid  #24292e;
+}
+
+.linkedin-link:hover {
+    background:  white;
+    color: #24292e;
+}
+
+        /* Projects Section */
+        .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.project-card {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Hover effect */
+.project-card:hover {
+    transform: scale(1.05);
+}
+/* Initially hidden text */
+.project-info {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    transition: bottom 0.5s;
+}
+/* Show text when hovered */
+.project-card:hover .project-info {
+    bottom: 0;
+}
+/* Buttons */
+.project-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: background 0.3s;
+}
+
+/* Demo Button */
+.project-button.demo {
+    background: #a9d1f2; /* Blue */
+}
+
+.project-button.demo:hover {
+    background: #82b4e6;
+}
+
+/* Live Button */
+.project-button.live {
+    background: #66d8e8; /* Green */
+}
+
+.project-button.live:hover {
+    background: #80edf3;
+}
 
         /* Resume Section */
         #resume {
          
-            background: #0c2d48;
+            background:  #c3e0e5;
             color:black;
             text-align: center;
         }
@@ -302,11 +450,12 @@
         <div><a href="#home">🆂🆄🆂🅼🅸🆃🅷🅰🖤</a></div>
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <div class="menu">
-            <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#certificates">Certificates</a>
             <a href="#projects">Projects</a>
+            <a href="#internship">Internshps</a>
             <a href="#resume">Resume</a>
             <a href="#contact">Contact</a>
         </div>
@@ -343,44 +492,165 @@
         </div>
     </div>
 </section>
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-list">
-            <div class="skill-rectangle">HTML</div>
-            <div class="skill-rectangle">CSS</div>
-            <div class="skill-rectangle">JavaScript</div>
-            <div class="skill-rectangle">Python</div>
-            <div class="skill-rectangle">React</div>
+<!-- Skills Section -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <div class="skill">
+            <span>HTML</span>
+            <div class="progress-bar">
+                <div class="progress html">95%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>CSS</span>
+            <div class="progress-bar">
+                <div class="progress css">90%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>JavaScript</span>
+            <div class="progress-bar">
+                <div class="progress js">85%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>Python</span>
+            <div class="progress-bar">
+                <div class="progress python">92%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>SQL</span>
+            <div class="progress-bar">
+                <div class="progress sql">88%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>Data Science</span>
+            <div class="progress-bar">
+                <div class="progress ds">80%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>Machine Learning</span>
+            <div class="progress-bar">
+                <div class="progress ml">85%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <span>React</span>
+            <div class="progress-bar">
+                <div class="progress react">55%</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Cerificates  Section -->
+<section id="certificates">
+    <h2>Certificates</h2>
+    <div class="certificates-container">
+        <!-- Certificate 1 - Deloitte -->
+        <div class="certificate-card" style="background-image: url('https://res.cloudinary.com/dam5pcbmg/image/upload/c_thumb,w_200,g_face/v1740846307/Screenshot_2025-03-01_215438_seifs5.png');">
+            <div class="certificate-info">
+                <h3>Data Analytics Job Simulation</h3>
+                <p>Issued by Deloitte (Forage)</p>
+                <a href="http://theforage.com/" target="_blank" class="certificate-link">Verify Certificate</a>
+            </div>
+        </div>
+
+        <!-- Certificate 2 - IBM Python 101 -->
+        <div class="certificate-card" style="background-image: url('https://res.cloudinary.com/dam5pcbmg/image/upload/c_thumb,w_200,g_face/v1740846320/Screenshot_2025-03-01_215344_kjpyzm.png');">
+            <div class="certificate-info">
+                <h3>Python 101 for Data Science</h3>
+                <p>Issued by IBM Cognitive Class</p>
+                <a href="https://courses.cognitiveclass.ai/certificates/9686fb01d32444d4be43d5395af7a1b7" target="_blank" class="certificate-link">Verify Certificate</a>
+            </div>
+        </div>
+
+        <!-- Certificate 3 - Great Learning -->
+        <div class="certificate-card" style="background-image: url('https://res.cloudinary.com/dam5pcbmg/image/upload/c_thumb,w_200,g_face/v1740846330/Screenshot_2025-03-01_215303_ufrhwj.png');">
+
+            <div class="certificate-info">
+                <h3>Great Learning Certificate</h3>
+                <a href="https://www.mygreatlearning.com/certificate/ETPHRFXJ" target="_blank" class="certificate-link">Verify Certificate</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Internships Section -->
+    <section id="internships">
+        <h2>Internships</h2>
+        <div class="internships-container">
+            <!-- Internship 1 - OIBSIP -->
+            <div class="internship-card" style="background-image: url('https://res.cloudinary.com/dam5pcbmg/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1740843899/Screenshot_2025-03-01_211429_heyohw.png');">
+                <div class="internship-info">
+                    <h3>OIBSIP Internship</h3>
+                    <p>Completed Data Science Internship - OIBSIP.</p>
+                    <div class="internship-buttons">
+                        <a href="https://github.com/susmithachaganti/oibsip" target="_blank" class="internship-link github-link">
+                            View Repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Internship 2 - AIML -->
+            <div class="internship-card" style="background-image: url('https://res.cloudinary.com/dam5pcbmg/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1740843795/Screenshot_2025-03-01_211220_dph5nx.png');">
+                <div class="internship-info">
+                    <h3>AIML Virtual Internship</h3>
+                    <p>Completed AIML Virtual Internship and posted on LinkedIn.</p>
+                    <div class="internship-buttons">
+                        <a href="https://www.linkedin.com/posts/activity-7173588288631496705-8hKr?utm_source=share&utm_medium=member_desktop&rcm=ACoAAER0UsQBqvK8yhky0wDq-uMUnDuLpCqjmpg" target="_blank" class="internship-link linkedin-link">
+                            View LinkedIn Post
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    
+
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
         <div class="projects-container">
-            <div class="project-card">
+            <div class="project-card" style="background-image: url('https://res.cloudinary.com/dam5pcbmg/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1740841041/Screenshot_2025-03-01_202305_lbyb5r.png');">
                 <div class="project-info">
                     <h3>CodeFobe Clone</h3>
                     <p>A clone of CodeFobe with interactive features.</p>
-                    <a href="https://github.com/susmithachaganti/codefobe" target="_blank" class="project-link">View Project</a>
+                    <div class="project-buttons">
+                        <a href="https://github.com/susmithachaganti/codefobe" target="_blank" class="project-button demo">Demo</a>
+                        <a href="https://susmithachaganti.github.io/codefobe/" target="_blank" class="project-button live">Live</a>
+                    </div>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" style="background-image: url('https://res.cloudinary.com/dam5pcbmg/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1740839497/Screenshot_2025-03-01_192340_nbah3t.png');">
                 <div class="project-info">
                     <h3>Quote Generator</h3>
                     <p>A random quote generator with a user-friendly interface.</p>
-                    <a href="https://github.com/susmithachaganti/quotegenerator" target="_blank" class="project-link">View Project</a>
+                    <div class="project-buttons">
+                        <a href="https://github.com/susmithachaganti/quotegenerator" target="_blank" class="project-button demo">Demo</a>
+                        <a href="https://susmithachaganti.github.io/quotegenerator/" target="_blank" class="project-button live">Live</a>
+                    </div>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" style="background-image: url('https://res.cloudinary.com/dam5pcbmg/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1740839497/Screenshot_2025-03-01_192340_nbah3t.png');">
                 <div class="project-info">
                     <h3>Portfolio</h3>
                     <p>My Portfolio Website.</p>
-                    <a href="https://github.com/susmithachaganti/todolist" target="_blank" class="project-link">View Project</a>
+                    <div class="project-buttons">
+                        <a href="https://github.com/susmithachaganti/todolist" target="_blank" class="project-button demo">Demo</a>
+                        <a href="https://susmithachaganti.github.io/portfolio/" target="_blank" class="project-button live">Live</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <br><br>
+    
     <!-- Resume Section -->
     <section id="resume">
         <h2>My Resume</h2>
@@ -410,6 +680,6 @@
         function toggleMenu() {
             document.querySelector('.navbar').classList.toggle('active');
         }
-    </script>
+</script>
 </body>
 </html>
