@@ -5,454 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Susmitha's Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        /* Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-            scroll-behavior: smooth;
-        }
-        body {
-            background-color : #0c2d48;
-            color: #fff;
-            line-height: 1.6;
-        }
-        h1, h2, h3 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        /* Navbar */
-        .navbar {
-            background:#0c2d48;
-            padding: 10px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-        .navbar a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-        }
-        .navbar a:hover {
-            color: black;
-        }
-        .menu {
-            display: flex;
-            gap: 15px;
-        }
-        .menu a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 20px;
-            cursor:pointer;
-        }
-        /* Home Section */
-        #home {
-            height: 250px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            padding: 20pxa;
-            background: linear-gradient(135deg, #c3e0e5, #c3e0e5);
-        }
-        #home h1 {
-            font-size: 50px;
-            margin-bottom: 10px;
-        }
-        #home img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #c3e0e5; 
-        }
-        .typing {
-            color: black;
-            font-size: 15px;
-        }
-        /* About Section */
-        #about {
-            padding: 50px 20px;
-            text-align: center;
-            background: #0c2d48;
-        }
-        #about p {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 18px;
-            line-height: 1.8;
-        }
-        /* Education Section */
-        #education {
-            padding: 50px 20px;
-            background: #0c2d48;
-            color: white;
-            text-align: center;
-        }
-        .education-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .education-card {
-            background:  #c3e0e5;
-            padding: 20px;
-            border-radius: 10px;
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: left;
-        }
-        .education-card h3 {
-            margin-bottom: 10px;
-            color: #0c090d;
-        }
- /* Skills Section */
- .skills-container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-}
-
-.skill {
-    margin-bottom: 15px;
-}
-
-.skill span {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.progress-bar {
-    width: 100%;
-    height: 25px; /* Increased height for better visibility */
-    background: #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-}
-
-.progress {
-    height: 100%;
-    border-radius: 5px;
-    transition: width 0.5s ease-in-out;
-    text-align: right;
-    line-height: 25px; /* Align text vertically */
-    padding-right: 10px; /* Space for text */
-    font-weight: bold;
-    color: white; /* Ensure visibility */
-}
-
-.html { width: 95%; background: #FF5733; }
-.css { width: 90%; background: #007BFF; }
-.js { width: 85%; background: #FFD700; color: black; } /* Darker text for contrast */
-.python { width: 92%; background: #4B8BBE; }
-.sql { width: 88%; background: #006699; }
-.ds { width: 80%; background: #8E44AD; }
-.ml { width: 85%; background: #2ECC71; }
-.react { width: 55%; background: #61DBFB; color: black; } /* Adjusted color for contrast */
-
-.certificates-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-    
-    .certificate-card {
-        width: 300px;
-        height: 350px;
-        background-size: cover;
-        background-position: center;
-        border-radius: 10px;
-        overflow: hidden;
-        position: relative;
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    .certificate-card:hover {
-        transform: scale(1.05);
-    }
-    
-    .certificate-info {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.7);
-        color: white;
-        padding: 15px;
-        text-align: center;
-        transform: translateY(100%);
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    .certificate-card:hover .certificate-info {
-        transform: translateY(0);
-    }
-    
-    .certificate-link {
-        display: inline-block;
-        padding: 8px 15px;
-        font-size: 14px;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: all 0.3s ease-in-out;
-    }
-    
-    /* Certificate Button Styling */
-    .certificate-link {
-        background: #0077b5;
-        color: white;
-        border: 2px solid #0077b5;
-    }
-    
-    .certificate-link:hover {
-        background: white;
-        color: #0077b5;
-    }
-  /* Internship Slide Styles */
-  .internships-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.internship-card {
-    width: 300px;
-    height: 350px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease-in-out;
-}
-.internship-card:hover {
-    transform: scale(1.05);
-}
-.internship-info {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 15px;
-    text-align: center;
-    transform: translateY(100%);
-    transition: transform 0.3s ease-in-out;
-}
-.internship-card:hover .internship-info {
-    transform: translateY(0);
-}
-
-.internship-buttons {
-    margin-top: 10px;
-}
-
-.internship-link {
-    display: inline-block;
-    padding: 8px 15px;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-}
-
-/* GitHub Repository Button */
-.github-link {
-    background: #24292e;
-    color: white;
-    border: 2px solid #24292e;
-}
-
-.github-link:hover {
-    background: white;
-    color: #24292e;
-}
-
-/* LinkedIn Post Button */
-.linkedin-link {
-    background:#24292e;
-    color: white;
-    border: 2px solid  #24292e;
-}
-
-.linkedin-link:hover {
-    background:  white;
-    color: #24292e;
-}
-
-        /* Projects Section */
-        .projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-.project-card {
-    width: 300px;
-    height: 300px;
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-/* Hover effect */
-.project-card:hover {
-    transform: scale(1.05);
-}
-/* Initially hidden text */
-.project-info {
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 15px;
-    text-align: center;
-    transition: bottom 0.5s;
-}
-/* Show text when hovered */
-.project-card:hover .project-info {
-    bottom: 0;
-}
-/* Buttons */
-.project-buttons {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.project-button {
-    display: inline-block;
-    padding: 8px 14px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    transition: background 0.3s;
-}
-
-/* Demo Button */
-.project-button.demo {
-    background: #a9d1f2; /* Blue */
-}
-
-.project-button.demo:hover {
-    background: #82b4e6;
-}
-
-/* Live Button */
-.project-button.live {
-    background: #66d8e8; /* Green */
-}
-
-.project-button.live:hover {
-    background: #80edf3;
-}
-
-        /* Resume Section */
-        #resume {
-         
-            background:  #c3e0e5;
-            color:black;
-            text-align: center;
-        }
-        .resume-button {
-            background: #FFE5E5;
-            color: black;
-            padding: 10px 20px;
-            border-radius: 422px;
-            text-decoration: none;
-            font-size: 18px;
-            transition: background 0.3s ease;
-        }
-        .resume-button:hover {
-            background: #FFE5E5;
-        }
-        /* Contact Section */
-        #contact {
-            text-align: center;
-            background: #0c2d48;
-        }
-        .social-links {
-                margin: 20px 0;
-         }
-
-        .social-links a {
-
-         color: #fff;
-           margin: 0 10px;
-          font-size: 24px;
-         text-decoration: none;
-}
-.social-links a:hover {
-    color: #FFE5E5;
-}
-        /* Footer */
-        footer {
-            text-align: center;
-            background: #0c2d48;
-            color: #fff;
-        }
-        @media (max-width: 600px) {
-            .menu {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 50px;
-                right: 20px;
-                left: 0;
-                background: #c3e0e5;
-                text-align: center;
-                padding: 10px;
-                width: max-content;
-            }
-
-            .navbar.active .menu {
-                display: flex;
-            }
-
-            .menu a {
-                display: block;
-                margin: 10px 0;
-            }
-
-            .menu-toggle {
-                display: block;
-                background: none;
-                border: none;
-                cursor: pointer;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -478,7 +30,12 @@
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello!! I'm Susmitha  a passionate and dedicated learner with a strong foundation in programming and technology.I have worked on some of the projects that showcase my skills and creativity.My goal is to leverage my technical expertise and creativity to contribute to meaningful projects and make an impact in the tech world. Let's connect and explore how we can collaborate on exciting projects!  Explore my portfolio to learn more about me!</p>
+        <p><p>Hello! I'm Susmitha Chaganti👋  
+            I’m a passionate and dedicated learner with a strong foundation in programming and technology. I thrive on solving problems, exploring new technologies, and building innovative solutions. Through my projects, I have showcased my creativity, analytical thinking, and technical expertise,continuously pushing myself to learn and grow.
+            Currently, I’m delving into **Data Analytics**, focusing on SQL, Python (Pandas, NumPy, Matplotlib), Excel, and Power BI. My expertise spans data cleaning, exploratory data analysis (EDA), visualization, and uncovering business insights. I enjoy transforming raw data into compelling stories that drive informed decision-making.  
+            With a keen interest in **technology and data-driven solutions**, my goal is to make a meaningful impact in the tech world by leveraging my skills to solve real-world challenges. 🚀  
+            ✨ Let’s connect and collaborate on exciting projects!Explore my portfolio to learn more about me and my journey.</p>
+    </section></p>
     </section>
    <!-- Education Section -->
    <section id="education">
@@ -506,55 +63,49 @@
 <section id="skills">
     <h2>Skills</h2>
     <div class="skills-container">
-        <div class="skill">
-            <span>HTML</span>
-            <div class="progress-bar">
-                <div class="progress html">95%</div>
-            </div>
+        <div class="skill" data-percent="95">
+            <svg width="120" height="120">
+                <circle cx="60" cy="60" r="50" class="background-circle"></circle>
+                <circle cx="60" cy="60" r="50" class="progress-circle html"></circle>
+            </svg>
+            <div class="skill-text">HTML 85%</div>
         </div>
-        <div class="skill">
-            <span>CSS</span>
-            <div class="progress-bar">
-                <div class="progress css">90%</div>
-            </div>
+        <div class="skill" data-percent="90">
+            <svg width="120" height="120">
+                <circle cx="60" cy="60" r="50" class="background-circle"></circle>
+                <circle cx="60" cy="60" r="50" class="progress-circle css"></circle>
+            </svg>
+            <div class="skill-text">CSS 80%</div>
         </div>
-        <div class="skill">
-            <span>JavaScript</span>
-            <div class="progress-bar">
-                <div class="progress js">85%</div>
-            </div>
+        <div class="skill" data-percent="85">
+            <svg width="120" height="120">
+                <circle cx="60" cy="60" r="50" class="background-circle"></circle>
+                <circle cx="60" cy="60" r="50" class="progress-circle js"></circle>
+            </svg>
+            <div class="skill-text">JS 75%</div>
         </div>
-        <div class="skill">
-            <span>Python</span>
-            <div class="progress-bar">
-                <div class="progress python">92%</div>
-            </div>
+        <div class="skill" data-percent="92">
+            <svg width="120" height="120">
+                <circle cx="60" cy="60" r="50" class="background-circle"></circle>
+                <circle cx="60" cy="60" r="50" class="progress-circle python"></circle>
+            </svg>
+            <div class="skill-text">Python 90%</div>
         </div>
-        <div class="skill">
-            <span>SQL</span>
-            <div class="progress-bar">
-                <div class="progress sql">88%</div>
-            </div>
+        <div class="skill" data-percent="88">
+            <svg width="120" height="120">
+                <circle cx="60" cy="60" r="50" class="background-circle"></circle>
+                <circle cx="60" cy="60" r="50" class="progress-circle sql"></circle>
+            </svg>
+            <div class="skill-text">SQL 88%</div>
         </div>
-        <div class="skill">
-            <span>Data Science</span>
-            <div class="progress-bar">
-                <div class="progress ds">80%</div>
-            </div>
+        <div class="skill" data-percent="85">
+            <svg width="120" height="120">
+                <circle cx="60" cy="60" r="50" class="background-circle"></circle>
+                <circle cx="60" cy="60" r="50" class="progress-circle ml"></circle>
+            </svg>
+            <div class="skill-text">ML 80%</div>
         </div>
-        <div class="skill">
-            <span>Machine Learning</span>
-            <div class="progress-bar">
-                <div class="progress ml">85%</div>
-            </div>
-        </div>
-        <div class="skill">
-            <span>React</span>
-            <div class="progress-bar">
-                <div class="progress react">55%</div>
-            </div>
-        </div>
-    </div>
+    </div>        
 </section>
 <!--Cerificates  Section -->
 <section id="certificates">
@@ -679,18 +230,6 @@
     <footer>
         <p>&copy;Susmitha's Portfolio</p>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <script>
-        // Typing Effect
-        new Typed(".typing", {
-            strings: ["Susmitha","A Student", " A Developer", "A Learner"],
-            typeSpeed: 50,
-            backSpeed: 50,
-            loop: true
-        });
-        function toggleMenu() {
-            document.querySelector('.navbar').classList.toggle('active');
-        }
-</script>
+   
 </body>
 </html>
